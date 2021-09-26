@@ -1,0 +1,30 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/movieFragment">
+
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.kotlin5dz.ui.fragment.movie.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" >
+        <action
+            android:id="@+id/action_movieFragment_to_getDetailFragment"
+            app:destination="@id/getDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/getDetailFragment"
+        android:name="com.example.kotlin5dz.ui.fragment.detail.GetDetailFragment"
+        android:label="fragment_get_detail"
+        tools:layout="@layout/fragment_get_detail" >
+        <argument
+            android:name="model"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/noInternetFragment"
+        android:name="com.example.kotlin5dz.ui.fragment.nointernet.NoInternetFragment"
+        android:label="fragment_no_internet"
+        tools:layout="@layout/fragment_no_internet" />
+</navigation>
